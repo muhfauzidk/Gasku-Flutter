@@ -4,6 +4,7 @@ import 'package:gasku/Comm/genTextFormField.dart';
 import 'package:gasku/DatabaseHandler/DbHelper.dart';
 import 'package:gasku/Model/UserModel.dart';
 import 'package:gasku/Screens/LoginForm.dart';
+import 'package:gasku/Screens/profile.dart';
 import 'package:gasku/Screens/profile_pic.dart';
 import 'package:gasku/Screens/pesanGas.dart';
 import 'package:gasku/Screens/kemitraan.dart';
@@ -132,7 +133,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),            
                   iconSize: 50,
                   onPressed: () {
-                    
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return profile();
+                        },
+                      )
+                    );
                   },
                 ),
                 
